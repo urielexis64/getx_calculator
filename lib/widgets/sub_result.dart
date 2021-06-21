@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class SubResult extends StatelessWidget {
-
   final String text;
 
   const SubResult({Key? key, required this.text}) : super(key: key);
@@ -11,7 +10,9 @@ class SubResult extends StatelessWidget {
     return Container(
       width: double.infinity,
       alignment: Alignment.centerRight,
-      child: Text( this.text , style: TextStyle(fontSize: 30 ) ),
+      child: FittedBox(
+          fit: BoxFit.contain,
+          child: Text(this.text, style: TextStyle(fontSize: 30))),
     );
   }
 }
